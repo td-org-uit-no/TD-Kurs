@@ -27,7 +27,7 @@ Td-kurs/
 
 
 Kan gis av andre:
-        GithubDesktop/
+        LazyGit/
 
 
 
