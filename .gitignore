@@ -517,3 +517,18 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 
+
+
+
+
+# marp-specifics
+node-modules/
+node-modules/*
+*node-modules/*
+
+# no pdfs, only source (tex or markdown).
+*.pdf
+
+
+
+
