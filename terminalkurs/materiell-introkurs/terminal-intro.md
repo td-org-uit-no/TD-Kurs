@@ -51,11 +51,13 @@ Du kan tenke på filer og mapper som
 * En fil er en mengde informasjon lagret et spesielt sted på disk (eller annet lagringsmedium)
 * En mappe er en spesiell fil som kan inneholde andre filer, og andre mapper.
 
+
 ---
 
 ## Hvor lagres filer?
 
-Informasjonen blir (for eksempel) lagret på disk som en rekke magnetisk opp/ned, altså binært. På maskinen har du et operativsystem, som kan lese, tolke og presentere informasjonen for deg, samt skrive informasjon tilbake til disk. Her skal du blant annet lære å bruke filsystemet gjennom terminalen.
+Informasjonen blir (for eksempel) lagret på disk som en rekke magnetisk opp/ned, altså binært. På maskinen har du et operativsystem (slik som windows, mac OSX eller linux), 
+som kan lese, tolke og presentere informasjonen for deg, samt skrive informasjon tilbake til disk. Her skal du blant annet lære å bruke filsystemet gjennom terminalen.
 
 På engelsk kalles en mappe (i UNIX-systemer) for en *directory*. På windows kalles det også en *folder*.
 
@@ -91,7 +93,7 @@ For eksempel har brukeren *eika* i systemet under en mappe på hjemmeområdet si
 
 ---
 
-Når *eika* logger inn, står han i mappen `/home/eika`. Hvis du bruker linux eller windows subystem for linux, har du også en slik mappe.
+Når *eika* logger inn, står han i mappen `/home/eika`. Hvis du bruker linux eller windows subsystem for linux (WSL), har du også en slik mappe.
 
 Videre kan du se at på hjemmeområdet sitt har han flere mapper, slik som `bin` for binære filer, `Pictures` for bilder og så videre.
 Inni disse mappene kan han ha flere mapper, som inneholder flere mapper etc. etc.
@@ -108,6 +110,9 @@ Finn ut hvilken mappe du står i. Kommandoen `pwd` er en forkortelse for *print 
 /home/eika/tinkering/markdown-slides-termkurs
 ```
 Kommandoen gir deg *stien* fra rotmappen `/` til mappen du står i. Dette kalles ofte en *absolutt sti* eller en *absolute path*.
+
+
+TODO: mulighet for misforståelse: 'absolutt sti er noe du får med pwd' etc.
 
 ---
 
@@ -161,8 +166,11 @@ Hvis du står på hjemmeområdet og skriver `ls -a`, vil du se mange skjulte fil
 
 #### Åpne en mappe i filutforskeren fra terminalen
 
-Hvis du vil åpne mappen du står i, kan du skrive `open .`, eller `xdg-open .`.
+Hvis du vil åpne mappen du står i, kan du skrive `open .`, eller `xdg-open .` hvis du sitter på linux eller mac.
+
 Du får da opp et grafisk vindu slik du er vant med fra vanlig bruk av mac eller windows.
+
+Hvis du bruker WSL skriver du `explorer.exe .` for å åpne mappen du står i.
 
 ---
 
@@ -181,14 +189,11 @@ Du bør nå se at stien du fikk med kommandoen `pwd` har forandret seg.
 ---
 
  ```
- ~/tinkering/markdown-slides-termkurs ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── ⬢ 20.14.0 ╱ 18:45:24 
 ❯ ls
 node_modules/  package.json  package-lock.json  terminal-intro.html  terminal-intro.jpeg  terminal-intro.md  terminal-intro.pdf  terminal-intro.png  testout.html  testout.pdf
 
- ~/tinkering/markdown-slides-termkurs ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── ────────────────── ⬢ 20.14.0 ╱ 18:45:31 
 ❯ mkdir testmappe
 
- ~/tinkering/markdown-slides-termkurs ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── ⬢ 20.14.0 ╱ 18:45:35 
 ❯ ls
 node_modules/  package.json  package-lock.json  terminal-intro.html  terminal-intro.jpeg  terminal-intro.md  terminal-intro.pdf  terminal-intro.png  testmappe/  testout.html  testout.pdf
  ```
@@ -327,6 +332,7 @@ notatmappe/
 
 ---
 
+<!-- Skummelt - dårlig ide for newbies.
 
 #### Slett mappen og filen inni med `rm -rf`
 Du kan slette en hel mappestruktur med `rm -rf`
@@ -339,8 +345,10 @@ notatmappe/
 ❯ ls
 
 ```
-
 ---
+
+-->
+
 
 #### Kommandoen `rmdir`
 En tryggere versjon for å slette mapper er å bruke `rmdir`.
