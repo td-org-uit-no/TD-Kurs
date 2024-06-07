@@ -43,7 +43,7 @@ Nyttig krydder:
 * Studenten kjenner til at det finnes ulike måter å kommunisere med maskinen i en terminal ved
   hjelp av shell-språk som f.eks bash, zsh og fish
 * Kjenne til verktøy som IPython
-* Studenten kjenner til tekstbehandlingsverktøy som nano, vi/vim
+* Studenten kjenner til tekstbehandlingsverktøy som nano, vi/vim, og kan også komme seg tilbake til terminalen fra disse.
 
 
 #### Kompetanse
