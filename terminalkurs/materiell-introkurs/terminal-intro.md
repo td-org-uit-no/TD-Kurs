@@ -7,7 +7,6 @@ paginate: true
 backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
-
 ---
 
 # Introduction
@@ -91,6 +90,7 @@ For eksempel har brukeren *eika* i systemet under en mappe på hjemmeområdet si
     └── tinkering
 ```
 
+
 ---
 
 Når *eika* logger inn, står han i mappen `/home/eika`. Hvis du bruker linux eller windows subsystem for linux (WSL), har du også en slik mappe.
@@ -109,7 +109,8 @@ Finn ut hvilken mappe du står i. Kommandoen `pwd` er en forkortelse for *print 
 ❯ pwd
 /home/eika/tinkering/markdown-slides-termkurs
 ```
-Kommandoen gir deg *stien* fra rotmappen `/` til mappen du står i. Dette kalles ofte en *absolutt sti* eller en *absolute path*.
+Kommandoen gir deg *stien* fra rotmappen `/` til mappen du står i. Dette kalles ofte en *absolutt sti* eller en *absolute path*,
+som vil si at stien beskriver en vei fra rotmappen `/` og frem til målet.
 
 
 TODO: mulighet for misforståelse: 'absolutt sti er noe du får med pwd' etc.
@@ -136,7 +137,6 @@ Hvis du gir `ls` en mappe som *input*, kan du få se innholdet i den mappen, f.e
 ❯ ls
 node_modules/  package.json  package-lock.json  terminal-intro.html  terminal-intro.jpeg  terminal-intro.md  terminal-intro.pdf  terminal-intro.png  testout.html
 
- ~/tinkering/markdown-slides-termkurs ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ❯ ls node_modules/
  accepts/             cliui/                  escodegen/           import-fresh/                   '@marp-team'/       path-type/                 socks-proxy-agent/    unbzip2-stream/
  agent-base/          color-convert/          esm/                 inherits/                        mathjax-full/      pend/                      source-map/           undici-types/
@@ -157,7 +157,7 @@ Kommandoen `ls` kan vise skjulte filer og mapper hvis man gir den et argument `-
 
 Som du ser har denne mappen to skjulte mapper, nemlig `.` og `..`. Skråstreken etterpå indikerer at det er en mappe. På noen systemer vil du ikke se skråstreken, men mappen vil ha en annen farge enn filer.
 
-Mappen `.` er mappen mappen selv, noe som er nyttig av og til.
+Mappen `.` er mappen selv, som vi skal se er nyttig.
 Mappen `..` er foreldremappen til `.`, altså ett steg opp i filtreet. Dette er nyttig når du skal tilbake i treet.
 
 Hvis du står på hjemmeområdet og skriver `ls -a`, vil du se mange skjulte filer.
