@@ -134,7 +134,6 @@ metall/satyricon/mother-north.mp3
 
 Kommandoen `ls` forteller deg hva som er inni en mappe. Hvis du kun skriver `ls` i terminalen som vist under,
 får du vite hvilke filer mappen du står i inneholder.
-Mappen du står i får du som nevnt vite med kommandoen `pwd`.
 
 ```
 ❯ ls
@@ -155,7 +154,7 @@ node_modules/  package.json  package-lock.json  terminal-intro.html  terminal-in
  ansi-regex/          color-name/             esprima/             ip-address/                      mdurl/             picocolors/                source-map-js/        universalify/
  ...
 ```
-Her har vi ikke tatt med alle mappene som dukker opp, siden det er veldig mange av dem.
+Her har vi ikke tatt med alt innholdet i mappen som dukker opp, siden det er veldig mye.
 
 ---
 
@@ -217,7 +216,7 @@ node_modules/  package.json  package-lock.json  terminal-intro.html  terminal-in
 * Skriv `pwd`
 * Skriv `cd ..`
 * Skriv `pwd`
-Du ser nå at du står i mappen over. Skriv `ls`, og du bør se mappen du navigerte tilbake fra.
+Du ser nå at du står i mappen over. Skriv `ls`, og du bør se innholdet i mappen du navigerte tilbake fra.
 
 ---
 
@@ -226,7 +225,7 @@ Du ser nå at du står i mappen over. Skriv `ls`, og du bør se mappen du navige
 Skriv nå `mkdir -p informatikk/semester1/terminalkurs/dokumenter/intro`.
 Bruk så kommandoen `cd` til å navigere deg til mappen `intro` i mappen for terminalkurset.
 
-*HINT:* Du kan bruke tab-completion til å gjøre dette med noen få tastetrykk.
+*HINT:* Du kan bruke tab-completion for å spare tastetrykk for mapper du allerede har laget.
 
 ---
 
@@ -266,6 +265,14 @@ Merk bruken av mappen `.` som input.
 
 ---
 
+Mange linux-distribusjoner har programmet `evince` for å åpne pdf-filer.
+
+Prøv å åpne en pdf-fil med `evince`, f.eks
+
+`evince oppgaver-intro.pdf`
+
+---
+
 ### Skriv noe til filen
 
 Skriv noe til filen din. For eksempel `terminal er moro`. (Eller ikke moro...)
@@ -281,7 +288,14 @@ Du kan vise innholdet i filen med kommandoen `cat`.
 terminal er moro
 ```
 
-Du kan også skrive `less terminalkurs-notes.txt`. Trykk  `q` for å komme deg tilbake til terminalen
+Du kan også skrive `less terminalkurs-notes.txt`. Trykk  `q` for å komme deg tilbake til terminalen.
+Prøv også `more terminalkurs-notes.txt`. Disse to kommandoene lar deg bla gjennom store filer.
+
+---
+
+Du kan også bruke kommandoen `head -20 tekstfil.txt` for å lese de 20 første linjene i `tekstfil.txt`.
+På samme måte kan du lese de 25 siste linjene med
+`tail -25 tekstfil.txt`
 
 ---
 
@@ -291,12 +305,38 @@ Du kan også skrive `less terminalkurs-notes.txt`. Trykk  `q` for å komme deg t
 ```
 ❯ cp terminalkurs-notes.txt kopi-notes-terminal.txt
 ```
-Som du ser tar programmet `cp` to argumenter, nemlig kilden `terminalkurs-notes.txt` som skal blir kopier,
+Som du ser tar programmet `cp` to argumenter, nemlig kilden `terminalkurs-notes.txt` som skal bli kopiert,
 og navn på output-filen `kopi-notes-terminal.txt`. 
 
 Pass på! Hvis `kopi-notes-terminal.txt` finnes fra før, blir den overskrevet!
 
 ---
+
+### Typisk bruk av `cp`
+
+Du har laget en mappe for et prosjekt, og trenger noen konfigurasjonsfiler. I et annet prosjet har du lignende konfigurasjonsfiler
+du tenker å tilpasse litt, så du kopierer dem til mappen du står i.
+
+Du kan gjøre dette med
+
+```
+cp ~/sti/til/gammelt/prosjekt/gammel-config-fil .
+```
+
+---
+
+#### Eksempel
+
+Eindride har operativsystemkurs og alle obligene har helt lik fil for hva som skal ignoreres av versjonskontrollen, kalt `.gitignore`
+Når en ny oblig kommer og han har opprettet mappen for ny oblig, gjør han følgende:
+
+```
+cp ~/repos/inf2201/project3/inf2201-P3/.gitignore .
+```
+
+
+---
+
 
 ### Bruk kommandoen `mv` for å flytte filen til en annen mappe
 
@@ -334,8 +374,6 @@ Du kan endre navnet på kopien til `kopi-notater-terminal.txt' med kommandoen
 ### Slett kopien med kommandoen `rm`
 
 Du kan slette kopien med kommandoen `rm kopi-notater-terminal-txt`.
-Her må du igjen være forsiktig. Når du sletter en fil, er det ikke lett å gjenopprette den som på f.eks windows hvor du har en papirkurv. 
-Merk likevel at `rm` ikke gir sikker sletting av filer hvis en angriper ønsker å finne ut hvilke statshemmeligheter du har hatt på disken din.
 
 ---
 
@@ -347,6 +385,19 @@ kopi-notes-terminal.txt  notatmappe/
 notatmappe/
 ```
 
+---
+
+### Advarsel
+Når du sletter en fil med `rm` er den i praksis borte for alltid! Linux har ikke en søppelbøtte du kan hente den tilbake fra.
+
+Vær også forsiktig med sensitive data. Når du sletter en fil, er det ikke lett å gjenopprette den som på f.eks windows hvor du har en papirkurv. 
+Merk likevel at `rm` ikke gir sikker sletting av filer hvis en angriper ønsker å finne ut hvilke statshemmeligheter du har hatt på disken din.
+
+---
+
+
+* Du lærer mer om dette og den indre organiseringen av filsystemet i blant annet operativsystemkurset.
+* For å slette filer fullstendig finnes det likevel nyttige verktøy du kan gjøre deg kjent med.
 
 ---
 
@@ -369,7 +420,7 @@ notatmappe/
 
 
 #### Kommandoen `rmdir`
-En tryggere versjon for å slette mapper er å bruke `rmdir`.
+For å slette en mappe kan du bruke `rmdir`.
 Den fungerer bare på tomme mapper.
 
 ---
@@ -391,4 +442,49 @@ Når vi har gjort det kan vi ikke bruke rmdir før vi sletter filen.
 
 ---
 
-#### 
+
+#### Flagg til kommandoen `rm`
+Det kan ta lang tid å slette en og en fil.
+Du kan gå inn i en mappe du skal slette og skrive `rm *`.
+Da sletter du alt innholdet i mappen, utenom skjulte mapper og filer, dvs mapper og filer som starter med `.`.
+For eksempel:
+
+---
+
+```
+❯ mkdir burkek
+❯ cd burkek/
+❯ mkdir .whatlol
+❯ ls
+❯ 
+❯ rm *
+fish: No matches for wildcard '*'. See `help wildcards-globbing`.
+rm *
+   ^
+❯ ls
+❯ ls -al
+total 12
+drwxrwxr-x  3 eindride eindride 4096 Jul 28 22:11 ./
+drwxrwxr-x 11 eindride eindride 4096 Jul 28 22:11 ../
+drwxrwxr-x  2 eindride eindride 4096 Jul 28 22:11 .whatlol/
+❯ touch .whatkek.txt
+❯ rm *
+fish: No matches for wildcard '*'. See `help wildcards-globbing`.
+rm *
+   ^
+❯ ls -al
+total 12
+drwxrwxr-x  3 eindride eindride 4096 Jul 28 22:12 ./
+drwxrwxr-x 11 eindride eindride 4096 Jul 28 22:11 ../
+drwxrwxr-x  2 eindride eindride 4096 Jul 28 22:11 .whatlol/
+-rw-rw-r--  1 eindride eindride    0 Jul 28 22:12 .whatkek.txt
+```
+
+---
+
+Nyttig for å
+
+* Ikke slette config-filer osv med uhell
+* Ikke slette **versjonskontrollen** din hvis du er uheldig og skriver `rm *` med uhell!
+
+* I tillegg kan man også gi flagg til å slette hele mappestrukturer med `rm`, men vi behandler ikke det her. Søk det opp hvis du trenger det, og vær forsiktig med kommandoen!
