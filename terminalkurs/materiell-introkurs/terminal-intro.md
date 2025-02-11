@@ -76,18 +76,17 @@ Treet tegnes ofte snudd opp ned, med roten på toppen. Dette er ganske vanlig i 
 For eksempel har brukeren *eika* i systemet under en mappe på hjemmeområdet sitt `home` som vist i figuren under:
 
 ```
-/home/
-└── eika
-    ├── bin
-    ├── Desktop
-    ├── Documents
-    ├── Downloads
-    ├── Pictures
-    ├── Public
-    ├── repos
-    ├── src
-    └── Videos
-    └── tinkering
+/
+└── home/
+    └── eika
+        ├── bin
+        ├── Desktop
+        ├── Documents
+        ├── Downloads
+        ├── Pictures
+        ├── repos
+        ├── src
+        └── tinkering
 ```
 
 
@@ -102,19 +101,32 @@ Inni disse mappene kan han ha flere mapper, som inneholder flere mapper etc. etc
 
 ### Kommandoen `pwd`
 
-
 Finn ut hvilken mappe du står i. Kommandoen `pwd` er en forkortelse for *print working directory*.
 
 ```
 ❯ pwd
 /home/eika/tinkering/markdown-slides-termkurs
 ```
+
 Kommandoen gir deg *stien* fra rotmappen `/` til mappen du står i. Dette kalles ofte en *absolutt sti* eller en *absolute path*,
 som vil si at stien beskriver en vei fra rotmappen `/` og frem til målet.
 
+---
 
-TODO: mulighet for misforståelse: 'absolutt sti er noe du får med pwd' etc.
+### Angi hvor man finner en fil
+Man kan angi posisjon til en fil på to ulike måter
 
+* Absolutt sti
+* Relativ sti
+
+Absolutt sti angis med utgangspunkt i roten `/` av filsystemet 
+
+Relativ sti angis typisk relativt til mappen du står i (altså working directory).
+Hvis du står i mappen `musikk` kan dette for eksempel være
+
+```
+metall/satyricon/mother-north.mp3
+```
 ---
 
 
@@ -300,18 +312,24 @@ Vi kan nå flytte  filen:
 ❯ mv terminalkurs-notes.txt notatmappe/
 ```
 
+
 Bruk `ls` til å sjekke at filen har blitt flyttet.
 
 ---
+
 
 ### Bruk kommandoen `mv` for å gi filen nytt navn
 Du kan endre navnet på kopien til `kopi-notater-terminal.txt' med kommandoen
 
 `mv kopi-notes-terminal.txt kopi-notater-terminal.txt`
 
+# Pass på!
+
+`mv` overskriver også filen hvis den finens fra før. Hvis `kopi-notater-terminal.txt` finnes fra før, blir den overskrevet!
 
 ---
 
+---
 
 ### Slett kopien med kommandoen `rm`
 
@@ -368,5 +386,9 @@ rmdir: failed to remove 'mappe2': Directory not empty          # feilmelding
 ❯ rmdir mappe2/                                                # slett mappa
 ```
 
+I snutten over skriver vi en tekst `"hallo der"` til filen inni den nye mappen `mappe2/teksthilsen.txt`.
+Når vi har gjort det kan vi ikke bruke rmdir før vi sletter filen.
+
 ---
 
+#### 
