@@ -185,6 +185,26 @@ Hvis du bruker WSL skriver du `explorer.exe .` for å åpne mappen du står i.
 
 ---
 
+#### Hva er en kommando i Unix?
+
+Oppbyggning
+```
+<kommando> [flagg]... [argumenter]...
+```
+
+* Flagg angis med bindestrek, f.eks `-a`, `-l` etc.
+* Flagg kan slås sammen: `ls -a -l` er det samme som `ls -al`. Prøv!
+* Argumentene kommer etter flagg, typisk uten bindestreker. For eksemepel:
+
+```
+ls -al Pictures
+```
+
+flaggene er `-al`, mens `Pictures` er argumentet.
+
+---
+
+
 ### Kommandoene `cd`, `mkdir`, `touch` og `rmdir`
 
 Du kan lage en ny mappe med kommandoen `mkdir`.
@@ -217,6 +237,12 @@ node_modules/  package.json  package-lock.json  terminal-intro.html  terminal-in
 * Skriv `cd ..`
 * Skriv `pwd`
 Du ser nå at du står i mappen over. Skriv `ls`, og du bør se innholdet i mappen du navigerte tilbake fra.
+
+---
+
+### Mappene `.` og `..`
+* Mappen `.` er working directory, altså mappen du står i.
+* Mappen `..` er foreldremappen til working directory, altså nivået over i filtreet.
 
 ---
 
@@ -482,9 +508,19 @@ drwxrwxr-x  2 eindride eindride 4096 Jul 28 22:11 .whatlol/
 
 ---
 
-Nyttig for å
+#### Pass på...
+Kommandoen `rm *` sletter alt i working directoryen utenom 
+mapper og skjulte filer, dvs filer som starter med `.`.
+
+Dette er nyttig for å:
 
 * Ikke slette config-filer osv med uhell
 * Ikke slette **versjonskontrollen** din hvis du er uheldig og skriver `rm *` med uhell!
 
+
+---
+
+### Danger zone
+
 * I tillegg kan man også gi flagg til å slette hele mappestrukturer med `rm`, men vi behandler ikke det her. Søk det opp hvis du trenger det, og vær forsiktig med kommandoen!
+
