@@ -107,6 +107,45 @@ Hvordan?
 cat tomatoes.txt walljoke.txt > jokes.txt
 ```
 
+---
 
 ## Bruk av `>>`
-Åge har lært seg å programmere i python.
+Åge har lært seg å programmere i python, og har laget et lite script 
+`what_does_this_do.py`, som dere kan finne i `materiell-introkurs/script-examples`.
+Hvordan kan Åge kjøre programmet flere ganger etter hverandre og logge hva som 
+skrives ut i en fil?
+
+
+---
+
+## Installasjon av programvare
+På linux-systemer er det enkelt å installere programvare. De fleste operativsystemer kommer
+med en *package-manager* og såkalte `repositories`, som inneholder pakker man kan installere som bruker.
+Pakke-manageren hjelper deg også å holde alt oppdatert.
+For å gjøre noen av oppgavene kan det hende du må installere `wget`.
+
+---
+
+
+Ubuntu:
+```
+sudo apt install wget
+```
+Her står `sudo` for *super-user do*, som gir deg midlertidige admin-tillatelser
+hvis du har passord til en super-bruker.
+
+## Noen nyttige ting
+
+Vi bruker helt vanilla bash først, så dere lærer det helt grunnleggende. Bash er
+ganske klumsete etter moderne standarder, men
+
+* Omtrent alle unix-maskiner har bash
+* Dere kan derfor lage for eksempel shell scripts i bash som kan deles på tvers av maskiner
+
+Anbefaling: Etter kurset kan det være lurt å for eksempel installere et bedre shell... som for eksempel
+`fish`. 
+
+
+## Hvordan komme seg ut av .... VIM ?
+
+Dere havner inn her før eller siden.
