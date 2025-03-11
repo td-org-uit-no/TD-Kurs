@@ -77,8 +77,36 @@ readme-please.md
 
 Som du ser feilet den første kommandoen (hvorfor?), men den andre ble likevel kjørt.
 Hvis du hadde brukt `&&` hadde ikke den andre kommandoen blitt kjørt når den første feilet.
-
+Prøv selv!
 
 ---
 
 ## Bruk av pipes og redirects
+
+I én fil `tomatoes.txt` ligger det følgende tekst
+
+```
+To tomater gikk over veien. Så ble den ene påkjørt
+Da ropte den andre: "Come on! Catch up!"
+```
+
+I en annen fil `walljoke.txt` ligger 
+
+```
+Hva sa den ene veggen til den andre veggen?
+Vi møtes på hjørnet!
+```
+
+Vi ønsker å kombinere disse til en fil `jokes.txt`.
+
+Hvordan?
+
+---
+
+```
+cat tomatoes.txt walljoke.txt > jokes.txt
+```
+
+
+## Bruk av `>>`
+Åge har lært seg å programmere i python.

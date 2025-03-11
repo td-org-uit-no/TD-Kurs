@@ -186,8 +186,28 @@ Hvis du bruker WSL skriver du `explorer.exe .` for å åpne mappen du står i.
 ---
 
 #### Hva er en kommando i Unix?
+En kommando er et program!
+Kommandoen ligger et sted på datamaskinen din som terminalen vet om. For å finne ut akkorat hvor, kan du for eksempel skrive
+```
+which ls
+```
+for å finne stien til progammet `ls`, og 
+```
+which pwd
+```
 
-Oppbyggning
+for å finne stien til progammemet `pwd`.
+
+---
+
+#### Hvordan vet terminalen hvor disse programmene ligger?
+
+Terminalen din vet hvor disse programmene ligger fordi mappen som inneholder de blir 
+lagt til en *miljøvariabel* som heter `PATH` når du starter terminalen din.
+
+---
+
+# Generell bruk av kommandoer
 ```
 <kommando> [flagg]... [argumenter]...
 ```
