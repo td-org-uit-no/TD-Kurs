@@ -1,0 +1,7 @@
+Hello, world!
+I hope you will enjoy this course.
+
+You will learn about navigating the terminal,
+creating files and managing them, and
+other useful tools available through your
+terminal
