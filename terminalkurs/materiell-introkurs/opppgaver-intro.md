@@ -4,6 +4,10 @@
 
 ### a)
 Naviger inn i mappen `foldersystem`, og finn ut hvilke filer og mapper den inneholder.
+Bruk kommandoen `ls` med ulike `options` som f.eks `ls -l`.
+
+Hvordan finner du skjulte filer og mapper med `ls`?
+Les litt ved å skrive `man ls` i terminalen
 
 ### b)
 * Hva heter tekstfilene i mappa `foldersystem/documents`?
@@ -34,14 +38,14 @@ Berømte dramatikere som William Shakespeare og Henrik Ibsen siteres ofte.
 I mappen `foldersystem/documents/books/gutenberg/shakespeare/` er
 det et script `getbook.sh` som laster ned shakespeares samlede verker.
 
-### a)
+
 Bruk scriptet til å laste ned Shakespeares samlede verker.
 * Hvor mange linjer er det i tekstfilen?
 * Hvor mange ord er det i tekstfilen?
 * Hva står på de 2 første og de 2 siste linjene?
 * Kan du få datamaskinen din til å lese de 5 siste linjene høyt?
 
-### b)
+### Utfordring:
 Et shakespeare-sitat sier følgende:
 
 ```
@@ -58,11 +62,26 @@ kan du finne flere Shakespeare-sitater. Finn ut hvilken linje disse står på i 
 samlede verkene.
 
 
-### d) 
+## Oppgave: Kopier en fil og finn flere sitater
+
 På [project gutenberg](https://www.gutenberg.org/cache/epub/13041/pg13041.txt)
 finner du boken "Vildanden" av Henrik Ibsen. 
-Anslå hvor mange prosent av linjene i teksten som inneholder navnet til 
+
+a) Kopier scriptet i forrige oppgave inn i en ny mappe 
+`foldersystem/documents/books/gutenberg/ibsen-vildanden`
+
+b) Modifiser scriptet slik at det laster ned boken til Ibsen i stedet for boken til Shakespeare,
+og at boken lagres i en tekstfil 'vildanden.txt'
+
+c) Anslå hvor mange prosent av linjene i teksten som inneholder navnet til 
 karakteren Gina.
+
+
+### Utfordring:
+Noen synes det er kult med Ibsen-sitater. Kan du finne ut hvor noen 
+på nettet som er fra Vildanden og sjekke om de finnes i teksten, og hvilke
+linjer de står på?
+
 
 
 ## Lagre standard-output fra programmer til fil
