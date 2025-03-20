@@ -3,7 +3,8 @@
 ## Oppgave: Navigering og flytting av filer
 
 ### a)
-Naviger inn i mappen `foldersystem`, og finn ut hvilke filer og mapper den inneholder.
+Bruk terminalen til å navigere inn i mappen `foldersystem`,
+og finn ut hvilke filer og mapper den inneholder.
 Bruk kommandoen `ls` med ulike `options` som f.eks `ls -l`.
 
 Hvordan finner du skjulte filer og mapper med `ls`?
@@ -11,6 +12,9 @@ Les litt ved å skrive `man ls` i terminalen
 
 ### b)
 * Hva heter tekstfilene i mappa `foldersystem/documents`?
+
+Les om programmene `head` og `tail` ved å lese manual-siden (`man head` etc.)
+
 * Hvordan kan du lese ut de 20 første linjene i filen `book-excerpt.txt?
 * Hvordan kan du lese ut de 20 siste linjene?
 * Hva inneholder filen?
@@ -32,28 +36,54 @@ Hint, bruk `head`, pipes (`|`) og `espeak`
 ### d)
 Bruk kommandoene `mv` og `mkdir` til å flytte boka inn i mappen `books/mysteries/whats-this-book/mysterybook-excerpt`.
 
-## Oppgave: Finn sitater.
+
+## Oppgave: Sletting av mapper
+
+Lag en mappe `tmp-dir`.
+Slett mappen `tmp-dir` med å bruke `rmdir`.
+
+
+Lag en ny mappe `tmp-dir-nonempty`.
+Legg inn en hilsen i mappen. Du kan for eksempel lage en tom fil med å bruke `touch`.
+
+Hva skjer hvis du nå prøver å slette mappen med `rmdir` ?
+
+## Oppgave: Slett en mappe med masse innhold
+
+Mappen `foldersystem/documents/lots-of-unneccessary-files/` inneholder
+masse filer som bare inneholder tull og tøys.
+Slett alle filene med én kommando.
+Slett deretter mappen med `rmdir`
+
+## Oppgave: Undersøk Shakespeares samlede verker.
 
 Berømte dramatikere som William Shakespeare og Henrik Ibsen siteres ofte.
 I mappen `foldersystem/documents/books/gutenberg/shakespeare/` er
 det et script `getbook.sh` som laster ned shakespeares samlede verker.
 
 
-Bruk scriptet til å laste ned Shakespeares samlede verker.
+b) Bruk scriptet til å laste ned Shakespeares samlede verker.
+a) Gi filen `famous-book.txt` et nytt navn `shakespeare-collected-works.txt`.
+
+c)
 * Hvor mange linjer er det i tekstfilen?
 * Hvor mange ord er det i tekstfilen?
 * Hva står på de 2 første og de 2 siste linjene?
 * Kan du få datamaskinen din til å lese de 5 siste linjene høyt?
 
-### Utfordring:
+### Utfordring: Finn sitater.
 Et shakespeare-sitat sier følgende:
 
 ```
-The fault, dear Brutus, is not in our stars, but in ourselves.
+The fault, dear Brutus, is not in our stars, but in ourselves
 ```
 
 Finn hvilket linjenummer dette sitatet står på.
-Hint (bruk `cat`, pipes (`|`) og filtrer med `grep -nE`)
+Hint (bruk `cat`, pipes (`|`) og filtrer med `grep -nEi`)
+
+Hva skjer hvis du i stedet skriver
+* Hva gjør `grep -nE` ?
+* Hva gjør `grep -E` ?
 
 
 ### c)
